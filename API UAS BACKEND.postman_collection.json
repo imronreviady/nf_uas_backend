@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "752076bf-7114-44a4-9809-5ee1bba77b34",
+		"name": "API UAS BACKEND",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5229051"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"imronreviady\",\n    \"password\": \"123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"imronreviady\",\n    \"password\": \"123123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all employees",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Imron Reviady\",\n    \"gender\": \"laki-laki\",\n    \"phone\": \"085892151006\",\n    \"address\": \"Cilangkap Tapos Depok\",\n    \"email\": \"imronreviady1@gmail.com\",\n    \"status\": \"active\",\n    \"hired_on\": \"2024-01-19\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Imron Reviady\",\n    \"gender\": \"laki-laki\",\n    \"phone\": \"085892151006\",\n    \"address\": \"Cilangkap Tapos Depok\",\n    \"email\": \"imronreviady1@gmail.com\",\n    \"status\": \"inactive\",\n    \"hired_on\": \"2024-01-19\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one employee",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/employees/search/imron",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						"search",
+						"imron"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get employee by status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJpbXJvbnJldmlhZHkiLCJpYXQiOjE3MDU2NDA0MzAsImV4cCI6MTcwNTY0NDAzMH0.kTMcEO6c_nWRe9MTOHdU2Pk5KAU9W2xnTEY4r6RWjdI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/employees/status/inactive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"employees",
+						"status",
+						"inactive"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
